@@ -2,66 +2,74 @@ import java.util.Scanner;
 
 public class Main {
 
-    static Integer[] r_dp;
-    static Integer[] l_dp;
-    static int[] seq;
+    static int[] larger;
+    static int[] lesser;
+    static int[] input;
+
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         int N = in.nextInt();
-
-        r_dp = new Integer[N];
-        l_dp = new Integer[N];
-        seq = new int[N];
-
+        input = new int[N];
+        larger = new int[N];
+        lesser = new int[N];
         for (int i=0; i<N; i++){
-            seq[i] = in.nextInt();
+            input[i] = in.nextInt();
         }
 
         for (int i=0; i<N; i++){
-            LIS(i);
-            LDS(i);
+            largeDp(i);
+            lessDp(i);
         }
+
+//        for (int a : larger){
+//            System.out.print(a+" ");
+//        }
+//        System.out.println();
+//        for (int a : lesser){
+//            System.out.print(a+" ");
+//        }
+//        System.out.println();
+
 
         int max = -1;
         for (int i=0; i<N; i++){
-            max = Math.max(r_dp[i]+l_dp[i],max );
+            if (larger[i]+lesser[i]>max){
+                max = larger[i]+lesser[i];
+            }
         }
 
         System.out.println(max-1);
 
     }
 
-    static int LIS(int N){
+    private static int largeDp(int n) {
+        
+        if (larger[n]==0){
+            
+            larger[n]=1;
 
-        // 탐색하지 않은 위치인 경우
-        if (r_dp[N]==null){
-            r_dp[N]=1;
-
-            //N 이전의 노드들을 탐색
-            for (int i=N-1; i>=0;i--){
-                if (seq[i]<seq[N]){
-                    r_dp[N] = Math.max(r_dp[N],LIS(i)+1);
+            for (int i=n-1; i>=0; i--){
+                if (input[i]<input[n]){
+                     larger[n] = Math.max(larger[n],largeDp(i)+1);
                 }
             }
-
         }
-        return r_dp[N];
+        return larger[n];
     }
 
-    static int LDS(int N){
-        if (l_dp[N]==null){
-            l_dp[N]=1;
+    private static int lessDp(int n) {
+        if (lesser[n]==0){
+            lesser[n]=1;
 
-            for (int i=N+1; i<l_dp.length; i++){
-                if (seq[i]<seq[N]){
-                    l_dp[N] = Math.max(l_dp[N], LDS(i)+1);
+            for (int i=n+1; i<lesser.length; i++){
+                if (input[i]<input[n]){
+                    lesser[n] =  Math.max(lesser[n],lessDp(i)+1);
                 }
             }
-
         }
-        return l_dp[N];
+        return lesser[n];
     }
 
 }
