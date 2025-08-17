@@ -6,6 +6,7 @@
 ## Array
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/jd99iam/coding-test/tree/master/0200-number-of-islands) |
 | [1582-design-browser-history](https://github.com/jd99iam/coding-test/tree/master/1582-design-browser-history) |
 ## Linked List
 |  |
@@ -36,6 +37,7 @@
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/jd99iam/coding-test/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0200-number-of-islands](https://github.com/jd99iam/coding-test/tree/master/0200-number-of-islands) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/jd99iam/coding-test/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 ## Binary Tree
 |  |
@@ -46,4 +48,13 @@
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/jd99iam/coding-test/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0200-number-of-islands](https://github.com/jd99iam/coding-test/tree/master/0200-number-of-islands) |
+## Union Find
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/jd99iam/coding-test/tree/master/0200-number-of-islands) |
+## Matrix
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/jd99iam/coding-test/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->
