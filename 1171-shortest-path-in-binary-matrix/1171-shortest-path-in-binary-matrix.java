@@ -35,7 +35,7 @@ class Solution {
             int y = current.y;
             int d = current.d;
 
-            if (x == n - 1 && y == n - 1 && grid[x][y] == 0)
+            if (x == n - 1 && y == n - 1)
                 return d;
 
             for (int i = 0; i < 8; i++) {
