@@ -39,13 +39,11 @@ class Solution {
                 return d;
 
             for (int i = 0; i < 8; i++) {
-                for (int j = 0; j < 8; j++) {
-                    int nx = x + dx[i];
-                    int ny = y + dy[j];
-                    if (nx >= 0 && nx < n && ny >= 0 && ny < n && visited[nx][ny] == false && grid[nx][ny] == 0) {
-                        visited[nx][ny] = true;
-                        q.offer(new Node(nx, ny, d + 1));
-                    }
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                if (nx >= 0 && nx < n && ny >= 0 && ny < n && visited[nx][ny] == false && grid[nx][ny] == 0) {
+                    visited[nx][ny] = true;
+                    q.offer(new Node(nx, ny, d + 1));
                 }
             }
         }
