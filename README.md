@@ -66,4 +66,16 @@
 |  |
 | ------- |
 | [0871-keys-and-rooms](https://github.com/jd99iam/coding-test/tree/master/0871-keys-and-rooms) |
+## Math
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/jd99iam/coding-test/tree/master/0070-climbing-stairs) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/jd99iam/coding-test/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/jd99iam/coding-test/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
